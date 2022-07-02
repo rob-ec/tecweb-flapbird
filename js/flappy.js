@@ -30,7 +30,12 @@ class Config {
     isJogoReal() {
         return this.isJogo('real');
     }
+}
 
+function setTheme(theme) {
+    let gameScreen = document.getElementById('game-screen');
+
+    gameScreen.classList.add("bg-" + theme)
 }
 
 var config = new Config;
@@ -49,6 +54,7 @@ btnPlay.addEventListener('click', function (element) {
     config.velocidadePersonagem = document.querySelector('input[name=velocidade-personagem]:checked').value
     config.pontuacao = document.querySelector('input[name=pontuacao]:checked').value
     
+    setTheme(config.cenario);
     closeConfig()
     new FlappyBird().start()
 })
