@@ -36,7 +36,7 @@ Demais partes do vídeo podem ser apenas apresentação da sua tela na qual voc�
 
 3) [X] **3)** Abertura entre os canos: o usuário poderá escolher um intervalo desejado entre os canos dos obstáculos. Fácil a abertura entre os canos é configurada para ser fácil (maior intervalo entre os canos, média (atual intervalo entre os canos) ou difícil (menor abertura entre os canos).
 
-4) [ ] **4)** Distância entre os canos: o usuário poderá escolher a distância entre os canos. Fácil a distância fica maior. Menor a distância é reduzida em relação ao fácil (atualmente como o jogo está). Difícil é a menor distância entre os canos.
+4) [X] **4)** Distância entre os canos: o usuário poderá escolher a distância entre os canos. Fácil a distância fica maior. Menor a distância é reduzida em relação ao fácil (atualmente como o jogo está). Difícil é a menor distância entre os canos.
  
 5) [ ] **5)** Velocidade do jogo: o usuário poderá escolher a velocidade do jogo passando o parâmetro desejado. O parâmetro pode ser entre 1 e 10. Sendo 1 velocidade baixa (o mais lento) e 10 velocidade máxima. Não permitir valores de velocidade menor que 1 ou maior que 10.
 

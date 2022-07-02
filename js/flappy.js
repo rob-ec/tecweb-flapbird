@@ -37,6 +37,25 @@ class Config {
 
         return abertura;
     }
+
+    espacoBarras() {
+        let espaco;
+
+        switch(this.dificuldade) {
+            case "facil":
+                espaco = 500;
+                break;
+            case "dificil":
+                espaco = 300;
+                break;
+            case "medio":
+            default:
+                espaco = 400;
+                break;
+        }
+
+        return espaco;
+    }
     
     isJogo(type) {
         return this.tipo === type
@@ -255,7 +274,11 @@ function colidiu(passaro, barreiras) {
     const largura = areaDoJogo.clientWidth
 
     const progresso = new Progresso()
-    const barreiras = new Barreiras(altura, largura, config.aberturaBarras(), 400,
+    const barreiras = new Barreiras(
+        altura, 
+        largura, 
+        config.aberturaBarras(), 
+        config.espacoBarras(),
         () => progresso.atualizarPontos(++pontos))
 
     const passaro = new Passaro(altura)
