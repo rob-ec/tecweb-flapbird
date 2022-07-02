@@ -18,6 +18,25 @@ class Config {
         this.velocidadePersonagem = velocidadePersonagem
         this.pontuacao = pontuacao
     }
+
+    aberturaBarras() {
+        let abertura;
+
+        switch(this.dificuldade) {
+            case "facil":
+                abertura = 300;
+                break;
+            case "dificil":
+                abertura = 160;
+                break;
+            case "medio":
+            default:
+                abertura = 200;
+                break;
+        }
+
+        return abertura;
+    }
     
     isJogo(type) {
         return this.tipo === type
@@ -236,7 +255,7 @@ function colidiu(passaro, barreiras) {
     const largura = areaDoJogo.clientWidth
 
     const progresso = new Progresso()
-    const barreiras = new Barreiras(altura, largura, 200, 400,
+    const barreiras = new Barreiras(altura, largura, config.aberturaBarras(), 400,
         () => progresso.atualizarPontos(++pontos))
 
     const passaro = new Passaro(altura)
