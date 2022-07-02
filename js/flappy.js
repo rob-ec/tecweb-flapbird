@@ -366,6 +366,7 @@ function FlappyBird() {
 
             if (colidiu(passaro, barreiras)) {
                 clearInterval(temporizador)
+                alert(pontos)
             }
         }, 20)
     }
