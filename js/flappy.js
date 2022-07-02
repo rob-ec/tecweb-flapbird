@@ -16,7 +16,12 @@ class Config {
         this.personagem = personagem
         this.tipo = tipo
         this.velocidadePersonagem = velocidadePersonagem
-        this.pontuacao = pontuacao
+
+        if (pontuacao >= 1 && pontuacao <= 10) {
+            this.pontuacao = Number(pontuacao)
+        } else {
+            this.pontuacao = 1
+        }
     }
 
     aberturaBarras() {
@@ -351,7 +356,11 @@ function FlappyBird() {
         largura,
         config.aberturaBarras(),
         config.espacoBarras(),
-        () => progresso.atualizarPontos(++pontos))
+        () => {
+            pontos = Number(pontos) + Number(config.pontuacao)
+            progresso.atualizarPontos(pontos)
+        }
+    )
 
     const passaro = new Passaro(altura)
 

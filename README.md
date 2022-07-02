@@ -48,7 +48,7 @@ Demais partes do vídeo podem ser apenas apresentação da sua tela na qual voc�
 
 9) [X] **9)** No final do jogo o nome e pontuação do jogador devem ser informados. Dica: Você poderá mostrar essa informação por meio do “alert” ou imprimir na tela por meio do innerHTML.
 
-10) [ ] **10)** Pontuação: O usuário deverá escolher quanto valerá cada ponto no jogo: poderá ser 1, 10 ou 100. Atualmente, cada ponto conquistado vale uma unidade.
+10) [X] **10)** Pontuação: O usuário deverá escolher quanto valerá cada ponto no jogo: poderá ser 1, 10 ou 100. Atualmente, cada ponto conquistado vale uma unidade.
 
 11) [ ] **11)** Colocar itens de pontos adicionais para o pássaro pegar durante o jogo.
    - [ ] **a)** Cada item dever aumentar a potuação em 10 pontos
