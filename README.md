@@ -42,7 +42,7 @@ Demais partes do vídeo podem ser apenas apresentação da sua tela na qual voc�
 
 6) [X] **6)** Personagem: O usuário poderá escolher o personagem do jogo. Atualmente é um pássaro, mas você deverá dar pelo menos mais uma opção de personagem, pode ser outro pássaro, ou qualquer outro personagem.
 
-7) [ ] **7)** Tipo de jogo. O jogo pode ser um treino onde o personagem não colide com os canos e real onde o personagem caso colida com os canos o jogo é terminado.
+7) [X] **7)** Tipo de jogo. O jogo pode ser um treino onde o personagem não colide com os canos e real onde o personagem caso colida com os canos o jogo é terminado.
 
 8) [ ] **8)** Velocidade do personagem: o usuário pode escolher a velocidade do personagem. A velocidade poderá ser baixa, média ou rápida. Atualmente o pássaro está configurado para uma velocidade média (8 para subir e -5 para descer).
 

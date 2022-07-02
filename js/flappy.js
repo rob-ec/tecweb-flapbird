@@ -88,8 +88,8 @@ class Config {
         return this.tipo === type
     }
 
-    isJogoTeste() {
-        return this.isJogo('teste');
+    isJogoTreino() {
+        return this.isJogo('treino');
     }
 
     isJogoReal() {
@@ -280,6 +280,11 @@ barreiras.pares.forEach( par => areaDoJogo.appendChild(par.elemento))  */
 }
 
 function colidiu(passaro, barreiras) {
+
+    if (config.isJogoTreino()) {
+        return false
+    }
+
     let colidiu = false
 
     barreiras.pares.forEach(parDeBarreiras => {
