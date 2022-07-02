@@ -195,4 +195,4 @@ function colidiu(passaro, barreiras) {
         }, 20)
     }
 }
- new FlappyBird().start() 
+// new FlappyBird().start() 
