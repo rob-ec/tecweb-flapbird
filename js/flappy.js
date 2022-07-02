@@ -66,6 +66,23 @@ class Config {
 
         return deslocamentoPadrao
     }
+
+    personagemImgSrc() {
+        let src = "img/";
+
+        switch (this.personagem) {
+            case "mary":
+                src += "mary.png" 
+                break;
+        
+            case "bird":
+            default:
+                src += "passaro.png"
+                break;
+        }
+
+        return src
+    }
     
     isJogo(type) {
         return this.tipo === type
@@ -197,7 +214,7 @@ function Passaro(alturaJogo) {
     let voando = false
 
     this.elemento = novoElemento('img', 'passaro')
-    this.elemento.src = 'img/passaro.png'
+    this.elemento.src = config.personagemImgSrc()
 
     this.getY = () => parseInt(this.elemento.style.bottom.split('px')[0])
     this.setY = y => this.elemento.style.bottom = `${y}px`
