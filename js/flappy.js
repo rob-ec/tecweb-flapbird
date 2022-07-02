@@ -22,7 +22,7 @@ class Config {
     aberturaBarras() {
         let abertura;
 
-        switch(this.dificuldade) {
+        switch (this.dificuldade) {
             case "facil":
                 abertura = 300;
                 break;
@@ -41,7 +41,7 @@ class Config {
     espacoBarras() {
         let espaco;
 
-        switch(this.dificuldade) {
+        switch (this.dificuldade) {
             case "facil":
                 espaco = 500;
                 break;
@@ -72,9 +72,9 @@ class Config {
 
         switch (this.personagem) {
             case "mary":
-                src += "mary.png" 
+                src += "mary.png"
                 break;
-        
+
             case "bird":
             default:
                 src += "passaro.png"
@@ -83,7 +83,47 @@ class Config {
 
         return src
     }
-    
+
+    personagemSpeed(type) {
+        let speedUp, speedDown;
+
+        switch (this.velocidadePersonagem) {
+            case "baixa":
+                speedUp = 6
+                speedDown = -3
+                break;
+
+            case "rapida":
+                speedUp = 10
+                speedDown = -8
+                break;
+
+            case "media":
+            default:
+                speedUp = 8
+                speedDown = -5
+                break;
+        }
+
+        if (type == "up") {
+            return speedUp
+        }
+
+        if (type == "down") {
+            return speedDown
+        }
+
+        return 0
+    }
+
+    personagemSpeedUp() {
+        return this.personagemSpeed("up")
+    }
+
+    personagemSpeedDown() {
+        return this.personagemSpeed("down")
+    }
+
     isJogo(type) {
         return this.tipo === type
     }
@@ -118,7 +158,7 @@ btnPlay.addEventListener('click', function (element) {
     config.tipo = document.querySelector('input[name=tipo]:checked').value
     config.velocidadePersonagem = document.querySelector('input[name=velocidade-personagem]:checked').value
     config.pontuacao = document.querySelector('input[name=pontuacao]:checked').value
-    
+
     setTheme(config.cenario);
     closeConfig()
     new FlappyBird().start()
@@ -143,7 +183,7 @@ function Barreira(reversa = false) {
 
 /* const b= new Barreira(false)
 b.setAltura(500)
-document.querySelector('[wm-flappy]').appendChild(b.elemento) */  
+document.querySelector('[wm-flappy]').appendChild(b.elemento) */
 
 
 
@@ -163,12 +203,12 @@ function ParDeBarreiras(altura, abertura, popsicaoNaTela) {
         this.inferior.setAltura(alturaInferior)
     }
     this.getX = () => parseInt(this.elemento.style.left.split('px')[0])
-    this.setX =  popsicaoNaTela => this.elemento.style.left = `${popsicaoNaTela}px`
+    this.setX = popsicaoNaTela => this.elemento.style.left = `${popsicaoNaTela}px`
     this.getLargura = () => this.elemento.clientWidth
 
     this.sortearAbertura()
     this.setX(popsicaoNaTela)
-} 
+}
 
 /* const b= new ParDeBarreiras(500,300,1000)
 document.querySelector('[wm-flappy]').appendChild(b.elemento)  */
@@ -191,8 +231,8 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
                 par.sortearAbertura()
             }
             const meio = largura / 2
-            const cruzouMeio = par.getX() + deslocamento >= meio
-                && par.getX() < meio
+            const cruzouMeio = par.getX() + deslocamento >= meio &&
+                par.getX() < meio
             if (cruzouMeio) {
                 notificarPonto()
             }
@@ -223,7 +263,7 @@ function Passaro(alturaJogo) {
     window.onkeyup = e => voando = false
 
     this.animar = () => {
-        const novoY = this.getY() + (voando ? 8 : -5)
+        const novoY = this.getY() + (voando ? config.personagemSpeedUp() : config.personagemSpeedDown())
         const alturaMaxima = alturaJogo - this.elemento.clientWidth
 
         if (novoY <= 0) {
@@ -251,7 +291,7 @@ setInterval(() => {
 },20) */
 
 
- function Progresso() {
+function Progresso() {
 
     this.elemento = novoElemento('span', 'progresso')
     this.atualizarPontos = pontos => {
@@ -269,7 +309,7 @@ areaDoJogo.appendChild(passaro.elemento)
 barreiras.pares.forEach( par => areaDoJogo.appendChild(par.elemento))  */
 
 
- function estaoSobrepostos(elementoA, elementoB) {
+function estaoSobrepostos(elementoA, elementoB) {
 
     const a = elementoA.getBoundingClientRect()
     const b = elementoB.getBoundingClientRect()
@@ -291,15 +331,15 @@ function colidiu(passaro, barreiras) {
         if (!colidiu) {
             const superior = parDeBarreiras.superior.elemento
             const inferior = parDeBarreiras.inferior.elemento
-            colidiu = estaoSobrepostos(passaro.elemento, superior)
-                || estaoSobrepostos(passaro.elemento, inferior)
+            colidiu = estaoSobrepostos(passaro.elemento, superior) ||
+                estaoSobrepostos(passaro.elemento, inferior)
         }
     })
     return colidiu
 
 }
 
- function FlappyBird() {
+function FlappyBird() {
     let pontos = 0
     const areaDoJogo = document.querySelector('[wm-flappy]')
     const altura = areaDoJogo.clientHeight
@@ -307,9 +347,9 @@ function colidiu(passaro, barreiras) {
 
     const progresso = new Progresso()
     const barreiras = new Barreiras(
-        altura, 
-        largura, 
-        config.aberturaBarras(), 
+        altura,
+        largura,
+        config.aberturaBarras(),
         config.espacoBarras(),
         () => progresso.atualizarPontos(++pontos))
 
@@ -324,9 +364,9 @@ function colidiu(passaro, barreiras) {
             barreiras.animar()
             passaro.animar()
 
-              if(colidiu(passaro,barreiras)){
-                 clearInterval(temporizador) 
-             } 
+            if (colidiu(passaro, barreiras)) {
+                clearInterval(temporizador)
+            }
         }, 20)
     }
-} 
+}
