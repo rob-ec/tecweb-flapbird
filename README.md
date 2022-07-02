@@ -30,7 +30,7 @@ Demais partes do vídeo podem ser apenas apresentação da sua tela na qual voc�
 
 ## Requisitos
 
-1) [ ] **1)** Crie o formulário de configurações do jogo conforme o exemplo da Figura 1. Você poderá criar o estilo que quiser. O formulário poderá ficar na própria página do jogo ou emumapáginainicial. Asconfiguraçõesescolhidasnoiníciodojogoserãoválidaspara o jogo. Caso o usuário queira iniciar um novo jogo as configurações deverão ser escolhidas novamente.
+1) [X] **1)** Crie o formulário de configurações do jogo conforme o exemplo da Figura 1. Você poderá criar o estilo que quiser. O formulário poderá ficar na própria página do jogo ou em uma página inicial. As configurações escolhidas no início do jogo serão válidas para o jogo. Caso o usuário queira iniciar um novo jogo as configurações deverão ser escolhidas novamente.
 
 2) [ ] **2)** O usuário poderá escolher o cenário do jogo diurno (atual) ou noturno. Escolha a melhor forma para estilizar o cenário noturno. Como por exemplo, tela de fundo ficar cinza e os obstáculos modificados para cinza escuro.
 
