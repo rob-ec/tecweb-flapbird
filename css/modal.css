@@ -1,11 +1,16 @@
 :root {
+    --white: #fff;
     --text-color: #000;
     --text-label-color: #999;
     --text-muted: #ccc;
+
     --bg-color: #0005;
+
     --bg-color-btn-config: none;
     --border-color-btn-config-hover: rgb(69, 99, 157);
-    --white: #fff;
+
+    --bg-btn: rgb(69, 99, 157);
+    --bg-btn-hover: rgba(69, 99, 157, 0.7);
 }
 
 .modal {
@@ -89,6 +94,26 @@
     border: 2px solid var(--white);
     border-radius: 5px;
     cursor: pointer;
+}
+
+.btn-form {
+    margin-top: 20px;
+    display: flex;
+}
+
+.btn {
+    margin: auto;
+    font-size: 1.2rem;
+    background-color: var(--bg-btn);
+    color: var(--white);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--bg-btn-hover);
 }
 
 .btn-config:hover {

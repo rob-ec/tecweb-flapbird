@@ -36,13 +36,19 @@
     <div class="modal" id="modal-one">
         <div class="modal-bg modal-exit"></div>
         <div class="modal-container">
+
           <h3>Configurações</h3>
           <button class="modal-close modal-exit">X</button>
+
           <form action="">
+
+            <!-- Nome -->
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" placeholder="Nome ou apelido">
             </div>
+
+            <!-- Cenário -->
             <div class="form-group">
                 <label for="nome">Cenário</label>
                 <div class="radio-group">
@@ -53,6 +59,8 @@
                     <label for="diurno">Diurno</label>
                 </div>
             </div>
+
+            <!-- Intervalo entre abertura dos canos  -->
             <div class="form-group">
                 <label for="nome">Intervalo entre abertura dos canos</label>
                 <div class="radio-group">
@@ -66,16 +74,22 @@
                     <label for="dificil">Difícil</label>
                 </div>
             </div>
+
+            <!-- Velocidade do jogo  -->
             <div class="form-group">
                 <label for="nome">Velocidade do jogo</label>
                 <input type="number" name="velocidade" id="velocidade" placeholder="Apenas números">
             </div>
+
+            <!-- Personagem  -->
             <div class="form-group">
                 <label for="personagem">Personagem</label>
                 <select name="personagem" id="personagem">
                     <option value="bird" selected>Bird</option>
                 </select>
             </div>
+
+            <!-- Tipo de jogo  -->
             <div class="form-group">
                 <label for="nome">Tipo de jogo</label>
                 <div class="radio-group">
@@ -86,6 +100,8 @@
                     <label for="real">Real</label>
                 </div>
             </div>
+
+            <!-- Velocidade do personagem  -->
             <div class="form-group">
                 <label for="nome">Velocidade do personagem</label>
                 <div class="radio-group">
@@ -99,6 +115,8 @@
                     <label for="rapida">Rápida</label>
                 </div>
             </div>
+
+            <!-- Pontuação  -->
             <div class="form-group">
                 <label for="nome">Pontuação</label>
                 <div class="radio-group">
@@ -111,6 +129,10 @@
                     <input type="radio" name="pontuacao" id="pontuacao-100">
                     <label for="pontuacao-100">100</label>
                 </div>
+            </div>
+
+            <div class="btn-form">
+                <button class="btn" id="play" type="submit">Jogar</button>
             </div>
           </form>
         </div>
