@@ -1,3 +1,58 @@
+class Config {
+    constructor(
+        nome = "Jogador",
+        cenario = "diurno",
+        dificuldade = "medio",
+        velocidadeJogo = 5,
+        personagem = "bird",
+        tipo = "real",
+        velocidadePersonagem = 5,
+        pontuacao = 1
+    ) {
+        this.nome = nome
+        this.cenario = cenario
+        this.dificuldade = dificuldade
+        this.velocidadeJogo = velocidadeJogo
+        this.personagem = personagem
+        this.tipo = tipo
+        this.velocidadePersonagem = velocidadePersonagem
+        this.pontuacao = pontuacao
+    }
+    
+    isJogo(type) {
+        return this.tipo === type
+    }
+
+    isJogoTeste() {
+        return this.isJogo('teste');
+    }
+
+    isJogoReal() {
+        return this.isJogo('real');
+    }
+
+}
+
+var config = new Config;
+
+const btnPlay = document.getElementById('play');
+
+btnPlay.addEventListener('click', function (element) {
+    element.preventDefault()
+
+    config.nome = document.getElementById('nome').value
+    config.cenario = document.querySelector('input[name=cenario]:checked').value
+    config.dificuldade = document.querySelector('input[name=dificuldade]:checked').value
+    config.velocidadeJogo = document.getElementById('velocidade').value
+    config.personagem = document.getElementById('personagem').value
+    config.tipo = document.querySelector('input[name=tipo]:checked').value
+    config.velocidadePersonagem = document.querySelector('input[name=velocidade-personagem]:checked').value
+    config.pontuacao = document.querySelector('input[name=pontuacao]:checked').value
+    
+    closeConfig()
+    new FlappyBird().start()
+})
+
 function novoElemento(tagName, className) {
     const elemento = document.createElement(tagName)
     elemento.className = className
@@ -194,5 +249,4 @@ function colidiu(passaro, barreiras) {
              } 
         }, 20)
     }
-}
-// new FlappyBird().start() 
+} 
