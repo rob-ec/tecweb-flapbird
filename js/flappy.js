@@ -56,6 +56,16 @@ class Config {
 
         return espaco;
     }
+
+    deslocamentoBarras() {
+        let deslocamentoPadrao = 3
+
+        if (this.velocidadeJogo >= 1 && this.velocidadeJogo <= 10) {
+            return this.velocidadeJogo
+        }
+
+        return deslocamentoPadrao
+    }
     
     isJogo(type) {
         return this.tipo === type
@@ -154,7 +164,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
         new ParDeBarreiras(altura, abertura, largura + espaco * 3)
     ]
 
-    const deslocamento = 3
+    const deslocamento = config.deslocamentoBarras()
     this.animar = () => {
         this.pares.forEach(par => {
             par.setX(par.getX() - deslocamento)

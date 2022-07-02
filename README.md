@@ -38,7 +38,7 @@ Demais partes do vídeo podem ser apenas apresentação da sua tela na qual voc�
 
 4) [X] **4)** Distância entre os canos: o usuário poderá escolher a distância entre os canos. Fácil a distância fica maior. Menor a distância é reduzida em relação ao fácil (atualmente como o jogo está). Difícil é a menor distância entre os canos.
  
-5) [ ] **5)** Velocidade do jogo: o usuário poderá escolher a velocidade do jogo passando o parâmetro desejado. O parâmetro pode ser entre 1 e 10. Sendo 1 velocidade baixa (o mais lento) e 10 velocidade máxima. Não permitir valores de velocidade menor que 1 ou maior que 10.
+5) [X] **5)** Velocidade do jogo: o usuário poderá escolher a velocidade do jogo passando o parâmetro desejado. O parâmetro pode ser entre 1 e 10. Sendo 1 velocidade baixa (o mais lento) e 10 velocidade máxima. Não permitir valores de velocidade menor que 1 ou maior que 10.
 
 6) [ ] **6)** Personagem: O usuário poderá escolher o personagem do jogo. Atualmente é um pássaro, mas você deverá dar pelo menos mais uma opção de personagem, pode ser outro pássaro, ou qualquer outro personagem.
 
