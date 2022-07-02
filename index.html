@@ -33,12 +33,12 @@
         </a>
     </div>
       
-    <div class="modal" id="modal-one">
+    <div class="modal open" id="modal-one">
         <div class="modal-bg modal-exit"></div>
         <div class="modal-container">
 
           <h3>Configurações</h3>
-          <button class="modal-close modal-exit">X</button>
+          <button class="modal-close modal-exit" id="modal-close">X</button>
 
           <form action="">
 
@@ -52,32 +52,32 @@
             <div class="form-group">
                 <label for="nome">Cenário</label>
                 <div class="radio-group">
-                    <input type="radio" name="cenario" id="noturno">
+                    <input type="radio" name="cenario" id="noturno" value="noturno">
                     <label for="noturno">Noturno</label>
 
-                    <input type="radio" name="cenario" id="diurno" checked>
+                    <input type="radio" name="cenario" id="diurno" value="diurno" checked>
                     <label for="diurno">Diurno</label>
                 </div>
             </div>
 
             <!-- Intervalo entre abertura dos canos  -->
             <div class="form-group">
-                <label for="nome">Intervalo entre abertura dos canos</label>
+                <label for="dificuldade">Intervalo entre abertura dos canos</label>
                 <div class="radio-group">
-                    <input type="radio" name="dificuldade" id="facil">
+                    <input type="radio" name="dificuldade" id="facil" value="facil">
                     <label for="facil">Fácil</label>
 
-                    <input type="radio" name="dificuldade" id="medio" checked>
+                    <input type="radio" name="dificuldade" id="medio" value="medio" checked>
                     <label for="medio">Médio</label>
 
-                    <input type="radio" name="dificuldade" id="dificil">
+                    <input type="radio" name="dificuldade" id="dificil" value="dificil">
                     <label for="dificil">Difícil</label>
                 </div>
             </div>
 
             <!-- Velocidade do jogo  -->
             <div class="form-group">
-                <label for="nome">Velocidade do jogo</label>
+                <label for="velocidade">Velocidade do jogo</label>
                 <input type="number" name="velocidade" id="velocidade" placeholder="Apenas números">
             </div>
 
@@ -86,47 +86,48 @@
                 <label for="personagem">Personagem</label>
                 <select name="personagem" id="personagem">
                     <option value="bird" selected>Bird</option>
+                    <option value="coisa" selected>Coisa</option>
                 </select>
             </div>
 
             <!-- Tipo de jogo  -->
             <div class="form-group">
-                <label for="nome">Tipo de jogo</label>
-                <div class="radio-group">
-                    <input type="radio" name="tipo" id="treino">
+                <label for="tipo">Tipo de jogo</label>
+                <div class="radio-group" id="tipo">
+                    <input type="radio" name="tipo" id="treino" value="treino">
                     <label for="treino">Treino</label>
 
-                    <input type="radio" name="tipo" id="real" checked>
+                    <input type="radio" name="tipo" id="real" value="real" checked>
                     <label for="real">Real</label>
                 </div>
             </div>
 
             <!-- Velocidade do personagem  -->
             <div class="form-group">
-                <label for="nome">Velocidade do personagem</label>
-                <div class="radio-group">
-                    <input type="radio" name="velocidade-personagem" id="baixa">
+                <label for="velocidade-personagem">Velocidade do personagem</label>
+                <div class="radio-group" id="velocidade-personagem">
+                    <input type="radio" name="velocidade-personagem" id="baixa" value="baixa">
                     <label for="baixa">Baixa</label>
 
-                    <input type="radio" name="velocidade-personagem" id="media" checked>
+                    <input type="radio" name="velocidade-personagem" id="media" value="media" checked>
                     <label for="media">Média</label>
 
-                    <input type="radio" name="velocidade-personagem" id="rapida">
+                    <input type="radio" name="velocidade-personagem" id="rapida" value="rapida">
                     <label for="rapida">Rápida</label>
                 </div>
             </div>
 
             <!-- Pontuação  -->
             <div class="form-group">
-                <label for="nome">Pontuação</label>
-                <div class="radio-group">
-                    <input type="radio" name="pontuacao" id="pontuacao-1" checked>
+                <label for="pontuacao">Pontuação</label>
+                <div class="radio-group" id="pontuacao">
+                    <input type="radio" name="pontuacao" id="pontuacao-1" value="1" checked>
                     <label for="pontuacao-1">1</label>
 
-                    <input type="radio" name="pontuacao" id="pontuacao-10">
+                    <input type="radio" name="pontuacao" id="pontuacao-10" value="10">
                     <label for="pontuacao-10">10</label>
 
-                    <input type="radio" name="pontuacao" id="pontuacao-100">
+                    <input type="radio" name="pontuacao" id="pontuacao-100" value="100">
                     <label for="pontuacao-100">100</label>
                 </div>
             </div>
