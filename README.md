@@ -32,7 +32,7 @@ Demais partes do vídeo podem ser apenas apresentação da sua tela na qual voc�
 
 1) [X] **1)** Crie o formulário de configurações do jogo conforme o exemplo da Figura 1. Você poderá criar o estilo que quiser. O formulário poderá ficar na própria página do jogo ou em uma página inicial. As configurações escolhidas no início do jogo serão válidas para o jogo. Caso o usuário queira iniciar um novo jogo as configurações deverão ser escolhidas novamente.
 
-2) [ ] **2)** O usuário poderá escolher o cenário do jogo diurno (atual) ou noturno. Escolha a melhor forma para estilizar o cenário noturno. Como por exemplo, tela de fundo ficar cinza e os obstáculos modificados para cinza escuro.
+2) [X] **2)** O usuário poderá escolher o cenário do jogo diurno (atual) ou noturno. Escolha a melhor forma para estilizar o cenário noturno. Como por exemplo, tela de fundo ficar cinza e os obstáculos modificados para cinza escuro.
 
 3) [ ] **3)** Abertura entre os canos: o usuário poderá escolher um intervalo desejado entre os canos dos obstáculos. Fácil a abertura entre os canos é configurada para ser fácil (maior intervalo entre os canos, média (atual intervalo entre os canos) ou difícil (menor abertura entre os canos).
 
