@@ -155,14 +155,23 @@ const btnPlay = document.getElementById('play');
 btnPlay.addEventListener('click', function (element) {
     element.preventDefault()
 
-    config.nome = document.getElementById('nome').value
-    config.cenario = document.querySelector('input[name=cenario]:checked').value
-    config.dificuldade = document.querySelector('input[name=dificuldade]:checked').value
-    config.velocidadeJogo = document.getElementById('velocidade').value
-    config.personagem = document.getElementById('personagem').value
-    config.tipo = document.querySelector('input[name=tipo]:checked').value
-    config.velocidadePersonagem = document.querySelector('input[name=velocidade-personagem]:checked').value
-    config.pontuacao = document.querySelector('input[name=pontuacao]:checked').value
+    let nome = document.getElementById('nome').value
+    let cenario = document.querySelector('input[name=cenario]:checked').value
+    let dificuldade = document.querySelector('input[name=dificuldade]:checked').value
+    let velocidadeJogo = document.getElementById('velocidade').value
+    let personagem = document.getElementById('personagem').value
+    let tipo = document.querySelector('input[name=tipo]:checked').value
+    let velocidadePersonagem = document.querySelector('input[name=velocidade-personagem]:checked').value
+    let pontuacao = document.querySelector('input[name=pontuacao]:checked').value
+
+    config.nome = nome ? nome : config.nome
+    config.cenario = cenario
+    config.dificuldade = dificuldade
+    config.velocidadeJogo = velocidadeJogo
+    config.personagem = personagem
+    config.tipo = tipo
+    config.velocidadePersonagem = velocidadePersonagem
+    config.pontuacao = pontuacao
 
     setTheme(config.cenario);
     closeConfig()
@@ -375,7 +384,7 @@ function FlappyBird() {
 
             if (colidiu(passaro, barreiras)) {
                 clearInterval(temporizador)
-                alert(pontos)
+                alert(`${config.nome} conseguiu ${pontos} ponto(s)`)
             }
         }, 20)
     }
