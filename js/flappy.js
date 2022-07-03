@@ -1,3 +1,6 @@
+/**
+ * Configuration
+ */
 class Config {
     constructor(
         nome = "Jogador",
@@ -19,8 +22,14 @@ class Config {
 
         if (pontuacao >= 1 && pontuacao <= 10) {
             this.pontuacao = Number(pontuacao)
-        } else {
+        }
+
+        if (pontuacao < 1) {
             this.pontuacao = 1
+        }
+
+        if (pontuacao > 10) {
+            this.pontuacao = 10
         }
     }
 
@@ -28,13 +37,17 @@ class Config {
         let abertura;
 
         switch (this.dificuldade) {
+
             case "facil":
                 abertura = 300;
                 break;
+
             case "dificil":
                 abertura = 160;
                 break;
+
             case "medio":
+
             default:
                 abertura = 200;
                 break;
@@ -47,13 +60,17 @@ class Config {
         let espaco;
 
         switch (this.dificuldade) {
+
             case "facil":
                 espaco = 500;
                 break;
+
             case "dificil":
                 espaco = 300;
                 break;
+
             case "medio":
+
             default:
                 espaco = 400;
                 break;
@@ -76,11 +93,13 @@ class Config {
         let src = "img/";
 
         switch (this.personagem) {
+
             case "mary":
                 src += "mary.png"
                 break;
 
             case "bird":
+
             default:
                 src += "passaro.png"
                 break;
@@ -93,6 +112,7 @@ class Config {
         let speedUp, speedDown;
 
         switch (this.velocidadePersonagem) {
+
             case "baixa":
                 speedUp = 6
                 speedDown = -3
@@ -104,6 +124,7 @@ class Config {
                 break;
 
             case "media":
+
             default:
                 speedUp = 8
                 speedDown = -5
@@ -179,8 +200,11 @@ btnPlay.addEventListener('click', function (element) {
     config.pontuacao = pontuacao
 
     setTheme(config.cenario);
+
     closeConfig()
+
     clearGame()
+    
     new FlappyBird().start()
 })
 
