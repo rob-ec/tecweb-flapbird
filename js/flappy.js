@@ -148,6 +148,11 @@ function setTheme(theme) {
     gameScreen.classList.add("bg-" + theme)
 }
 
+function clearGame() {
+    let gameScreen = document.getElementById('game-screen');
+    gameScreen.innerHTML = '';
+}
+
 var config = new Config;
 
 const btnPlay = document.getElementById('play');
@@ -175,6 +180,7 @@ btnPlay.addEventListener('click', function (element) {
 
     setTheme(config.cenario);
     closeConfig()
+    clearGame()
     new FlappyBird().start()
 })
 
